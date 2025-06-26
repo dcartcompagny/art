@@ -1,0 +1,612 @@
+/* Définir les polices personnalisées */
+@font-face {
+    font-family: 'INGAME';
+    src: url('pol/INGAME.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'PlayfairDisplaySC-Black';
+    src: url('pol/PlayfairDisplaySC-Black.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Robot-Rebels';
+    src: url('pol/Robot-Rebels.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('pol/Roboto-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Boul';
+    src: url('pol/Boul.otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'PlayfairDisplaySC-Bold';
+    src: url('pol/PlayfairDisplaySC-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Sobatyan-Regular';
+    src: url('pol/Sobatyan-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto-MediumItalic';
+    src: url('pol/Roboto-MediumItalic.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MilestoneBrush';
+    src: url('pol/MilestoneBrush.otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Rostack';
+    src: url('pol/Rostack.otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url('pol/Roboto-Black.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Matemasie-Regular';
+    src: url('pol/Matemasie-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NewAmsterdam-Regular';
+    src: url('pol/NewAmsterdam-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NerkoOne-Regular';
+    src: url('pol/NerkoOne-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('pol/Roboto-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'DMSerifText-Regular';
+    src: url('pol/DMSerifText-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: auto;                              /* Supprime les marges par défaut */
+  padding: 0;                             /* Supprime les paddings par défaut */
+  line-height: 1.6;                       /* Hauteur de ligne pour une meilleure lisibilité */
+  background-color: #f5f8fa;              /* Couleur de fond claire */
+  color: #1a1a1a;                         /* Couleur du texte principale (gris très foncé) */
+}
+
+header {
+  background: linear-gradient(to right, rgb(255,255,255), rgb(41,6,134));;             /* Bleu nuit pour l'en-tête */
+  color: solid black;                            /* Texte blanc */
+  padding: auto ;                        /* Espacement vertical de 20px */
+}
+
+.navbar {
+  display: flex;                          /* Affiche les éléments en ligne */
+  justify-content: space-between;        /* Espace les éléments entre le début et la fin */
+  align-items: center;                   /* Centre les éléments verticalement */
+  flex-wrap: nowrap;                     /* Empêche les éléments de passer à la ligne */
+  gap: 20px;                              /* Espace entre les blocs */
+  padding: 0 20px;                        /* Padding horizontal */
+  position: relative;                    /* Nécessaire pour positionner le mega-menu */
+  z-index: 1000;                         /* Place la navbar au-dessus des autres éléments */
+  box-sizing: border-box;
+  height: 100px;                         /* Hauteur fixe souhaitée pour la navbar */
+}
+
+.navbar .logo { 
+  margin-right: 20px;                    /* Espace entre le logo et le texte */
+  max-height: 80px;                      /* Hauteur du logo contrôlée */
+  width: auto;                           /* Largeur auto pour garder les proportions */
+  object-fit: contain;                   /* Garde le ratio sans rogner */
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;                          /* Harmonisé avec ton logo */
+  font-family: 'Roboto-Black', sans-serif;  /* Police personnalisée */
+  min-width: 150px;                      /* Évite que le texte se compresse trop */
+}
+
+.navbar ul {
+  display: flex;                         /* Affiche les liens en ligne */
+  list-style: none;                      /* Supprime les puces des listes */
+  gap: 20px;                             /* Espace entre les éléments du menu */
+  position: relative;                    /* Pour positionner le mega-menu */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  position: relative;                    /* Pour positionner le mega-menu */
+}
+
+.navbar ul li a {
+  color: #fff;                           /* Couleur du lien : blanc */
+  text-decoration: none;                /* Supprime le soulignement */
+  font-weight: bold;                    /* Met en gras */
+  padding: 10px 15px;                   /* Padding intérieur pour les liens */
+  display: block;                       /* Occupe tout l'espace cliquable */
+}
+
+/* Mega menu styles */
+.navbar ul li:hover .mega-menu {
+  display: flex;                        /* Affiche le mega-menu au survol */
+}
+
+.mega-menu {
+  background-color: #fff;
+  display: none;                        /* Masqué par défaut */
+  position: absolute;                   /* Positionné relativement au parent */
+  top: 100%;                            /* Juste sous le parent */
+  left: 70%;                            /* Décalé vers le centre */
+  transform: translateX(-50%);         /* Centre horizontalement */
+  color: #333;                          /* Couleur du texte */
+  padding: 20px;                        /* Espacement intérieur */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Ombre portée */
+  border-radius: 8px;                   /* Bords arrondis */
+  min-width: 500px;                     /* Largeur minimale */
+  gap: 40px;                            /* Espace entre colonnes */
+  z-index: 1000;                        /* S'affiche au-dessus du reste */
+  flex-wrap: wrap;                      /* Permet le retour à la ligne des colonnes */
+}
+
+.mega-menu .column {
+  flex: 1;                              /* Chaque colonne prend un espace égal */
+  min-width: 150px;                     /* Largeur minimale pour éviter l'écrasement */
+}
+
+.mega-menu .column h4 {
+  color: #0c1e3d;                       /* Titre en bleu nuit */
+  margin-bottom: 10px;                  /* Espace sous le titre */
+}
+
+.mega-menu .column a {
+  color: #333;                          /* Couleur texte sombre */
+  text-decoration: none;               /* Pas de soulignement */
+  display: block;                      /* Chaque lien est en bloc */
+  margin: 5px 0;                        /* Espace vertical entre les liens */
+}
+
+.mega-menu .column a:hover {
+  color: #ff6b00;                       /* Couleur orange au survol */
+}
+
+#mobile-menu {
+  display: none;                        /* Caché en version desktop */
+  font-size: 28px;                      /* Taille de l’icône mobile */
+  cursor: pointer;                      /* Curseur pointeur au survol */
+  color: black;                         /* Couleur de l'icône */
+}
+
+.container {
+  width: auto;                          /* Largeur automatique */
+  max-width: 1000px;                    /* Limite la largeur maximale */
+  margin: auto;                         /* Centre horizontalement */
+  padding: 20px 0;                      /* Padding vertical */
+}
+
+.section-image {
+  width: 100%;                          /* Image prend toute la largeur */
+  max-height: 300px;                    /* Hauteur maximale */
+  object-fit: cover;                    /* L’image garde ses proportions */
+  margin-bottom: 20px;                  /* Espace sous l’image */
+  border-radius: 8px;                   /* Bords arrondis */
+}
+
+section {
+  background: #fff;                       /* Fond blanc */
+  margin: 5px;                         /* Marge verticale */
+  padding: 20px;                          /* Padding intérieur */
+  
+}
+
+h1, h2 {
+  color: #0c1e3d;                         /* Titres en bleu nuit */
+}
+
+ul {
+  list-style: disc inside;                /* Puces à l’intérieur du bloc */
+}
+
+footer {
+  background-color: #0c1e3d;              /* Fond bleu nuit */
+  color: #fff;                            /* Texte blanc */
+  text-align: center;                    /* Centré */
+  padding: 20px 0;                        /* Padding vertical */
+  margin-top: 40px;                       /* Marge au-dessus du footer */
+}
+
+/* === SECTION DES CARTES D'ACTUALITÉS === */
+.news-section {
+  display: flex; /* Affiche les cartes en ligne (flexbox) */
+  flex-wrap: wrap; /* Permet le retour à la ligne si l'espace est insuffisant */
+  gap: 20px; /* Espace entre les cartes */
+  padding: 40px; /* Marge intérieure autour de la section */
+  background-color: #f5f5f5; /* Couleur de fond claire */
+  justify-content: center; /* Centre les cartes horizontalement */
+}
+
+.news-card {
+  background-color: #fff; /* Fond blanc de chaque carte */
+  width: 300px; /* Largeur fixe de la carte */
+  border-radius: 4px; /* Coins légèrement arrondis */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Ombre pour un effet de profondeur */
+  overflow: hidden; /* Cache ce qui dépasse du cadre */
+  display: flex; /* Organisation verticale du contenu interne */
+  flex-direction: column; /* Aligne les enfants verticalement */
+}
+
+.news-card img {
+  width: 100%; /* L’image prend toute la largeur de la carte */
+  height: 180px; /* Hauteur fixe de l’image */
+  object-fit: cover; /* Remplit sans déformer, en rognant si nécessaire */
+}
+
+.card-content {
+  padding: 20px; /* Marge intérieure autour du contenu textuel */
+  flex-grow: 1; /* Permet au bloc de prendre l’espace disponible */
+}
+
+.card-content h3 {
+  font-size: 1rem; /* Taille du titre */
+  margin: 0 0 10px; /* Marge en bas uniquement */
+  color: #000; /* Couleur noire */
+}
+
+.card-content h3.green {
+  color: #62aa00; /* Vert spécifique utilisé dans l'exemple fourni */
+}
+
+.card-content p {
+  font-size: 0.9rem; /* Taille du texte de paragraphe */
+  color: #333; /* Gris foncé pour une bonne lisibilité */
+}
+
+.card-footer {
+  margin-top: 15px; /* Espace au-dessus du pied de carte */
+  display: flex; /* Alignement horizontal */
+  justify-content: space-between; /* Espace entre la date et le lien */
+  align-items: center; /* Alignement vertical centré */
+  font-size: 0.85rem; /* Taille plus petite pour les infos complémentaires */
+}
+
+.card-footer .date {
+  color: #555; /* Gris moyen pour la date */
+}
+
+.card-footer .link {
+  color: #62aa00; /* Même vert que pour les titres */
+  text-decoration: none; /* Supprime le soulignement */
+  font-weight: bold; /* Texte en gras */
+}
+
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  background-color: #f0f4f8;
+  color: #333;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.contact-grid {
+  display: flex;
+  width: 100%;
+  height: 300px; /* tu peux ajuster à la taille que tu veux */
+}
+
+.contact-info {
+  width: 35%;
+  padding: 35px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-image {
+  width: 65%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.contact-image img {
+  width: 100%;         /* ✅ L’image prend toute la largeur */
+  height: 100%;        /* ✅ L’image prend toute la hauteur */
+  object-fit: cover;   /* ✅ Remplit tout sans déformation */
+  display: block;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+
+.site-footer {
+  background-color: rgb(245, 242, 228); 
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #444;
+  border-top: 1px solid #ccc;
+}
+
+.site-footer a {
+  color: #005599;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.social-icons {
+    display: flex; /* Affiche les icônes sur une seule ligne */
+    justify-content: center; /* Centre les icônes horizontalement */
+}
+
+/* Styles généraux pour les boutons */
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.social-button img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+/* WhatsApp */
+.whatsapp-button {
+  background-color: #25d366;
+}
+
+.whatsapp-button:hover {
+  background-color: #128c7e;
+  transform: scale(1.1);
+}
+
+/* Facebook */
+.facebook-button {
+  background-color: rgb(194, 199, 252);
+}
+
+.facebook-button:hover {
+  background-color: #155db8;
+  transform: scale(1.1);
+}
+
+/* Twitter */
+.twitter-button {
+  background-color: #ffffff;
+}
+
+.twitter-button:hover {
+  background-color: rgb(176, 176, 176);
+  transform: scale(1.1);
+}
+
+/* Instagram */
+.instagram-button {
+  background-color: #e4405f;
+}
+
+.instagram-button:hover {
+  background-color: rgb(152, 12, 47);
+  transform: scale(1.1);
+}
+
+/* TikTok */
+.tiktok-button {
+  background-color: #ffffff;
+}
+
+.tiktok-button:hover {
+  background-color: rgb(176, 176, 176);
+  transform: scale(1.1);
+}
+
+
+
+/* ============================= */
+/* === VERSION DESKTOP ONLY ==== */
+/* ============================= */
+
+@media screen and (min-width: 1025px) {
+  .navbar ul li:hover .mega-menu {
+    display: flex !important;
+  }
+
+  /* Optionnel si le lien gêne le hover */
+  .navbar ul li > a {
+    pointer-events: none;
+  }
+
+  .navbar ul li:hover > a {
+    pointer-events: auto;
+  }
+
+  #mobile-menu {
+    display: none;
+  }
+}
+
+
+
+
+/* ============================= */
+/* === VERSION MOBILE ONLY ==== */
+/* ============================= */
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  #mobile-menu {
+    display: block;                /* Affiche le menu hamburger */
+  }
+
+  #nav-links {
+    display: none;                 /* Caché par défaut */
+    flex-direction: column;       /* Menu vertical */
+    width: 100%;
+    background-color: #290686;    /* Fond bleu nuit */
+    position: absolute;
+    top: 100px;
+    left: 0;
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  #nav-links.show {
+    display: flex;                 /* Affiche le menu si classe 'show' */
+  }
+
+  .navbar ul li {
+    text-align: center;
+  }
+
+  .navbar ul li a {
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  .mega-menu {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    padding: 10px;
+    min-width: unset;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mega-menu .column {
+    min-width: 100%;
+  }
+
+  .navbar ul li .mega-menu {
+  display: none; /* Masqué par défaut */
+  position: static;
+  transform: none;
+  box-shadow: none;
+  padding: 10px;
+  min-width: unset;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+}
+
+.navbar ul li .mega-menu.show {
+  display: flex !important; /* Affiché dynamiquement via JS */
+}
+
+
+  .brand-name {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  
+  .contact-grid {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .contact-info {
+    width: 100%;
+    padding: 2rem 1rem;
+    text-align: left;
+  }
+
+  .contact-image {
+    display: none;
+  }
+
+  .social-button {
+    padding: 8px;
+  }
+
+  .social-button img {
+    width: 35px;
+    height: 35px;
+  }
+
+    .scroll-button {
+        width: 60px;
+        height: 60px;
+        font-size: 30px; /* Ajuste la taille des boutons de défilement pour les tablettes */
+    }
+
+    footer {
+        font-size: 14px; /* Ajuste légèrement la taille du texte du pied de page */
+    }
