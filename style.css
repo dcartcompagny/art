@@ -118,725 +118,624 @@
     font-style: normal;
     font-display: swap;
 }
+/* ========================= */
+/* RESET GLOBAL */
+/* ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
 body {
-  font-family:'Roboto-Medium','Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police lisible et moderne */
-  margin: auto;                              /* Supprime les marges par défaut */
-  padding: 0;                             /* Supprime les paddings par défaut */
-  line-height: 1.6;                       /* Hauteur de ligne pour une meilleure lisibilité */
-  background-color: #f5f8fa;              /* Couleur de fond claire */
-  color: #1a1a1a;                         /* Couleur du texte principale (gris très foncé) */
+    background: #f5f7fa;
+    color: #1f2937;
 }
 
-header {
-  background: linear-gradient(to right, rgb(255,255,255), rgb(41,6,134));;             /* Bleu nuit pour l'en-tête */
-  color: solid black;                            /* Texte blanc */
-  padding: auto ;                        /* Espacement vertical de 20px */
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.top-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 25px;
+
+    background: white;
+
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
 }
 
-.navbar {
-  display: flex;                          /* Affiche les éléments en ligne */
-  justify-content: space-between;        /* Espace les éléments entre le début et la fin */
-  align-items: center;                   /* Centre les éléments verticalement */
-  flex-wrap: nowrap;                     /* Empêche les éléments de passer à la ligne */
-  gap: 20px;                              /* Espace entre les blocs */
-  padding: 0 20px;                        /* Padding horizontal */
-  position: relative;                    /* Nécessaire pour positionner le mega-menu */
-  z-index: 1000;                         /* Place la navbar au-dessus des autres éléments */
-  box-sizing: border-box;
-  height: 100px;                         /* Hauteur fixe souhaitée pour la navbar */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.navbar .logo { 
-  margin-right: 20px;                    /* Espace entre le logo et le texte */
-  max-height: 80px;                      /* Hauteur du logo contrôlée */
-  width: auto;                           /* Largeur auto pour garder les proportions */
-  object-fit: contain;                   /* Garde le ratio sans rogner */
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 
-.brand-name {
-  font-size: 24px;
-  font-weight: bold;
-  color: black;                          /* Harmonisé avec ton logo */
-  font-family: 'Roboto-Black', sans-serif;  /* Police personnalisée */
-  min-width: 150px;                      /* Évite que le texte se compresse trop */
+.site-name {
+    font-size: 1.5rem;
+    color: #004aad;
 }
 
-.navbar ul {
-  display: flex;                         /* Affiche les liens en ligne */
-  list-style: none;                      /* Supprime les puces des listes */
-  gap: 20px;                             /* Espace entre les éléments du menu */
-  position: relative;                    /* Pour positionner le mega-menu */
-  margin: 0;
-  padding: 0;
+.site-subtitle {
+    font-size: 0.75rem;
+    color: #6b7280;
 }
 
-.navbar ul li {
-  position: relative;                    /* Pour positionner le mega-menu */
+/* ========================= */
+/* NAV TABS */
+/* ========================= */
+
+.tabs-nav {
+    display: flex;
+    gap: 10px;
 }
 
-.navbar ul li a {
-  color: #fff;                           /* Couleur du lien : blanc */
-  text-decoration: none;                /* Supprime le soulignement */
-  font-weight: bold;                    /* Met en gras */
-  padding: 10px 15px;                   /* Padding intérieur pour les liens */
-  display: block;                       /* Occupe tout l'espace cliquable */
+.tab-btn {
+    border: none;
+    background: transparent;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px 14px;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    color: #6b7280;
+
+    transition: 0.3s ease;
 }
 
-/* Mega menu styles */
-.navbar ul li:hover .mega-menu {
-  display: flex;                        /* Affiche le mega-menu au survol */
+.tab-btn i {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
 }
 
-.mega-menu {
-  background-color: #fff;
-  display: none;                        /* Masqué par défaut */
-  position: absolute;                   /* Positionné relativement au parent */
-  top: 100%;                            /* Juste sous le parent */
-  left: 70%;                            /* Décalé vers le centre */
-  transform: translateX(-50%);         /* Centre horizontalement */
-  color: #333;                          /* Couleur du texte */
-  padding: 20px;                        /* Espacement intérieur */
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Ombre portée */
-  border-radius: 8px;                   /* Bords arrondis */
-  min-width: 500px;                     /* Largeur minimale */
-  gap: 40px;                            /* Espace entre colonnes */
-  z-index: 1000;                        /* S'affiche au-dessus du reste */
-  flex-wrap: wrap;                      /* Permet le retour à la ligne des colonnes */
+.tab-btn span {
+    font-size: 0.75rem;
 }
 
-.mega-menu .column {
-  flex: 1;                              /* Chaque colonne prend un espace égal */
-  min-width: 150px;                     /* Largeur minimale pour éviter l'écrasement */
+.tab-btn:hover {
+    background: #e6efff;
+    color: #004aad;
 }
 
-.mega-menu .column h4 {
-  color: #0c1e3d;                       /* Titre en bleu nuit */
-  margin-bottom: 10px;                  /* Espace sous le titre */
+.tab-btn.active {
+    background: #004aad;
+    color: white;
 }
 
-.mega-menu .column a {
-  color: #333;                          /* Couleur texte sombre */
-  text-decoration: none;               /* Pas de soulignement */
-  display: block;                      /* Chaque lien est en bloc */
-  margin: 5px 0;                        /* Espace vertical entre les liens */
+/* ========================= */
+/* SECTIONS */
+/* ========================= */
+
+.tab-content {
+    display: none;
+    padding: 60px 8%;
 }
 
-.mega-menu .column a:hover {
-  color: #ff6b00;                       /* Couleur orange au survol */
+.tab-content.active {
+    display: block;
 }
 
-#mobile-menu {
-  display: none;                        /* Caché en version desktop */
-  font-size: 28px;                      /* Taille de l’icône mobile */
-  cursor: pointer;                      /* Curseur pointeur au survol */
-  color: black;                         /* Couleur de l'icône */
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero {
+    position: relative;
+    height: 85vh;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.container, .enjeux-wrapper {
-  width: auto;                          /* Largeur automatique */
-  max-width: 1000px;                    /* Limite la largeur maximale */
-  margin: auto;                         /* Centre horizontalement */
-  padding: 20px 0;                      /* Padding vertical */
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.section-image, .enjeux-image {
-  width: 100%;                          /* Image prend toute la largeur */
-  max-height: 300px;                    /* Hauteur maximale */
-  object-fit: cover;                    /* L’image garde ses proportions */
-  margin-bottom: 20px;                  /* Espace sous l’image */
-  border-radius: 8px;                   /* Bords arrondis */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
 }
 
-.avec-image {
-  position: relative;
-  overflow: hidden;
-  color: white;
-  padding: 60px 20px;
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    color: white;
+
+    width: 90%;
 }
 
-.bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+.hero-badge {
+    display: inline-block;
+    padding: 10px 18px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50px;
+    margin-bottom: 15px;
 }
 
-.overlay {
-  position: relative;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.6); /* voile noir transparent */
- padding: 60px 20px;
-  
-  max-width: 100%;
-  margin: auto;
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
 }
 
-.overlay blockquote {
-  font-size: 1.4rem;
-  font-style: italic;
-  margin-bottom: 20px;
-  color: #f0f0f0;
+.hero-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
 }
 
-.overlay p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #e0e0e0;
+.hero-content p {
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-.accueil-mobile{
-  display: none;
+/* boutons hero */
+
+.hero-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
-/* Conteneur principal avec image de fond */
-.avec-image {
-  position: relative; /* Nécessaire pour positionner l'image en absolu à l'intérieur */
-  overflow: hidden; /* Cache tout débordement (utile si l'image dépasse) */
-  color: white; /* Couleur du texte par défaut en blanc */
-  padding: 0; /* Supprimé pour que l'image et l'overlay occupent 100% sans débordement */
-  height: 100vh; /* Hauteur pleine fenêtre (modifiable selon besoin) */
+.primary-btn {
+    background: #004aad;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
 }
 
-/* Image de fond couvrant tout le conteneur */
-.bg-image {
-  position: absolute; /* Positionnement absolu par rapport au parent */
-  top: 0; /* Commence tout en haut */
-  left: 0; /* Commence à gauche */
-  width: 100%; /* Prend toute la largeur du parent */
-  height: 100%; /* Prend toute la hauteur du parent */
-  object-fit: cover; /* L’image remplit tout sans se déformer */
-  z-index: 1; /* Placée en arrière-plan */
+.secondary-btn {
+    background: white;
+    color: #004aad;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
 }
 
-.overlay {
-  position: absolute;            /* Positionne le calque par-dessus l'image en se basant sur le parent */
-  top: 0;                        /* Aligne le calque en haut du parent */
-  left: 0;                       /* Aligne le calque à gauche du parent */
-  width: 100%;                  /* Prend toute la largeur du conteneur */
-  height: 100%;                 /* Prend toute la hauteur du conteneur */
-  z-index: 2;                   /* Place cette couche au-dessus de l'image de fond (z-index: 1 pour l'image) */
-  background-color: rgba(0, 0, 0, 0.6); /* Applique un voile noir semi-transparent (60%) */
-  display: flex;                /* Utilise Flexbox pour aligner les contenus à l’intérieur */
-  justify-content: center;     /* Centre horizontalement les contenus dans l’overlay */
-  align-items: center;         /* Centre verticalement les contenus dans l’overlay */
-  text-align: left;            /* Aligne le texte à gauche (plus professionnel pour des paragraphes) */
-  padding: 40px;               /* Espace intérieur autour du contenu */
-  box-sizing: border-box;      /* Inclut padding et bordure dans les dimensions totales */
+/* ========================= */
+/* TITRES SECTION */
+/* ========================= */
+
+.container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #111827;
 }
 
-.overlay blockquote {
-  font-size: 1.8rem;            /* Agrandit le texte de citation pour plus d’impact visuel */
-  font-style: italic;          /* Met le texte en italique (style typique des citations) */
-  margin-bottom: 30px;         /* Espace en bas de la citation, avant le paragraphe */
-  color: #f8f8f8;              /* Couleur très claire pour contraster avec le fond sombre */
-  line-height: 1.6;            /* Espace vertical entre les lignes de la citation */
-  max-width: 600px;            /* Limite la largeur pour une meilleure lisibilité */
+/* ========================= */
+/* SERVICES GRID */
+/* ========================= */
+
+.home-services,
+.services-grid {
+    margin-top: 40px;
 }
 
-.overlay p {
-  font-size: 1.2rem;           /* Texte un peu plus grand pour plus de lisibilité */
-  line-height: 1.8;            /* Espace vertical généreux entre les lignes du paragraphe */
-  color: #eaeaea;              /* Couleur gris très clair, lisible sur le fond noir */
-  max-width: 900px;            /* Largeur maximale pour éviter que le texte ne s'étale trop */
-  margin: 0 auto;              /* Centre le paragraphe horizontalement dans l’overlay */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
 }
 
-
-/* Section mobile cachée par défaut */
-.accueil-mobile {
-  display: none; /* On cache la section mobile en version desktop */
+.service-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
 }
 
-/* Image de fond pour la version mobile */
-.mobile-bg {
-  display: none;       /* L'image est cachée par défaut (non visible sur desktop) */
-  width: 100%;         /* L'image prend toute la largeur du conteneur */
-  height: auto;        /* La hauteur est automatiquement ajustée selon les proportions de l'image */
-  object-fit: cover;   /* L'image remplit l'espace sans se déformer ni s'étirer */
+.service-card:hover {
+    transform: translateY(-8px);
 }
 
-/* Texte superposé sur l’image mobile */
-.mobile-overlay {
-  padding: 20px;                          /* Espace intérieur autour du texte pour aérer le contenu */
-  color: #ffffff;                         /* Couleur du texte en blanc, pour un bon contraste sur fond sombre */
-  background-color: rgba(0, 0, 0, 0.6);   /* Couche noire semi-transparente derrière le texte */
-  text-align: left;                      /* Aligne le texte à gauche pour une lecture professionnelle */
-  font-size: 1rem;                       /* Taille de police adaptée aux petits écrans */
-  line-height: 1.6;                      /* Espacement vertical entre les lignes pour une lecture confortable */
-}
-
-section {
-  background: #fff;                       /* Fond blanc */
-  margin: 5px;                         /* Marge verticale */
-  padding: 20px;                          /* Padding intérieur */
-  
-}
-
-h1, h2 {
-  color: #0c1e3d;                         /* Titres en bleu nuit */
-}
-
-ul {
-  list-style: disc inside;                /* Puces à l’intérieur du bloc */
-}
-
-
-footer {
-  background-color: #0c1e3d;              /* Fond bleu nuit */
-  color: #fff;                            /* Texte blanc */
-  text-align: center;                    /* Centré */
-  padding: 20px 0;                        /* Padding vertical */
-  margin-top: 40px;                       /* Marge au-dessus du footer */
-}
-
-/* === SECTION DES CARTES D'ACTUALITÉS === */
-.news-section {
-  display: flex; /* Affiche les cartes en ligne (flexbox) */
-  flex-wrap: wrap; /* Permet le retour à la ligne si l'espace est insuffisant */
-  gap: 20px; /* Espace entre les cartes */
-  padding: 40px; /* Marge intérieure autour de la section */
-  background-color: #f5f5f5; /* Couleur de fond claire */
-  justify-content: center; /* Centre les cartes horizontalement */
-}
-
-.news-card {
-  background-color: #fff; /* Fond blanc de chaque carte */
-  width: 300px; /* Largeur fixe de la carte */
-  border-radius: 4px; /* Coins légèrement arrondis */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Ombre pour un effet de profondeur */
-  overflow: hidden; /* Cache ce qui dépasse du cadre */
-  display: flex; /* Organisation verticale du contenu interne */
-  flex-direction: column; /* Aligne les enfants verticalement */
-}
-
-.news-card img {
-  width: 100%; /* L’image prend toute la largeur de la carte */
-  height: 180px; /* Hauteur fixe de l’image */
-  object-fit: cover; /* Remplit sans déformer, en rognant si nécessaire */
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .card-content {
-  padding: 20px; /* Marge intérieure autour du contenu textuel */
-  flex-grow: 1; /* Permet au bloc de prendre l’espace disponible */
+    padding: 18px;
+}
+
+.card-content i {
+    font-size: 1.4rem;
+    color: #004aad;
+    margin-bottom: 10px;
 }
 
 .card-content h3 {
-  font-size: 1rem; /* Taille du titre */
-  margin: 0 0 10px; /* Marge en bas uniquement */
-  color: #000; /* Couleur noire */
-}
-
-.card-content h3.green {
-  color: #62aa00; /* Vert spécifique utilisé dans l'exemple fourni */
-}
-
-.card-content p {
-  font-size: 0.9rem; /* Taille du texte de paragraphe */
-  color: #333; /* Gris foncé pour une bonne lisibilité */
-}
-
-.card-footer {
-  margin-top: 15px; /* Espace au-dessus du pied de carte */
-  display: flex; /* Alignement horizontal */
-  justify-content: space-between; /* Espace entre la date et le lien */
-  align-items: center; /* Alignement vertical centré */
-  font-size: 0.85rem; /* Taille plus petite pour les infos complémentaires */
-}
-
-.card-footer .date {
-  color: #555; /* Gris moyen pour la date */
-}
-
-.card-footer .link {
-  color: #62aa00; /* Même vert que pour les titres */
-  text-decoration: none; /* Supprime le soulignement */
-  font-weight: bold; /* Texte en gras */
-}
-
-
-.contact-section {
-  display: flex;
-  justify-content: center;
-  background-color: #f0f4f8;
-  color: #333;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.contact-grid {
-  display: flex;
-  width: 100%;
-  height: 300px; /* tu peux ajuster à la taille que tu veux */
-}
-
-.contact-info {
-  width: 35%;
-  padding: 35px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contact-image {
-  width: 65%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.contact-image img {
-  width: 100%;         /* ✅ L’image prend toute la largeur */
-  height: 100%;        /* ✅ L’image prend toute la hauteur */
-  object-fit: cover;   /* ✅ Remplit tout sans déformation */
-  display: block;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.email-link {
-  color: #0077cc;                 /* Couleur du lien (bleu clair) */
-  text-decoration: none;          /* Enlève le soulignement par défaut */
-  font-weight: 500;               /* Rend le texte un peu plus épais que normal */
-  transition: color 0.3s ease;    /* Ajoute une animation douce au changement de couleur */
-}
-
-.email-link:hover {
-  color: #005fa3;                 /* Couleur du lien quand on passe la souris (bleu un peu plus foncé) */
-  text-decoration: underline;     /* Ajoute le soulignement au survol */
-}
-
-
-.site-footer {
-  background-color: rgb(245, 242, 228); 
-  padding: 1.5rem 1rem;
-  text-align: center;
-  font-size: 0.95rem;
-  color: #444;
-  border-top: 1px solid #ccc;
-}
-
-.site-footer a {
-  color: #005599;
-  text-decoration: none;
-  margin: 0 0.5rem;
-}
-
-.site-footer a:hover {
-  text-decoration: underline;
-}
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.social-icons {
-    display: flex; /* Affiche les icônes sur une seule ligne */
-    justify-content: center; /* Centre les icônes horizontalement */
-}
-
-/* Styles généraux pour les boutons */
-.social-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  border-radius: 50%;
-  padding: 10px;
-  margin: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  text-decoration: none;
-}
-
-.social-button img {
-  width: 20px;
-  height: 20px;
-  object-fit: cover;
-}
-
-/* WhatsApp */
-.whatsapp-button {
-  background-color: #25d366;
-}
-
-.whatsapp-button:hover {
-  background-color: #128c7e;
-  transform: scale(1.1);
-}
-
-/* Facebook */
-.facebook-button {
-  background-color: rgb(194, 199, 252);
-}
-
-.facebook-button:hover {
-  background-color: #155db8;
-  transform: scale(1.1);
-}
-
-/* Twitter */
-.twitter-button {
-  background-color: #ffffff;
-}
-
-.twitter-button:hover {
-  background-color: rgb(176, 176, 176);
-  transform: scale(1.1);
-}
-
-/* Instagram */
-.instagram-button {
-  background-color: #e4405f;
-}
-
-.instagram-button:hover {
-  background-color: rgb(152, 12, 47);
-  transform: scale(1.1);
-}
-
-/* TikTok */
-.tiktok-button {
-  background-color: #ffffff;
-}
-
-.tiktok-button:hover {
-  background-color: rgb(176, 176, 176);
-  transform: scale(1.1);
-}
-
-
-
-/* ============================= */
-/* === VERSION DESKTOP ONLY ==== */
-/* ============================= */
-
-@media screen and (min-width: 1025px) {
-  .navbar ul li:hover .mega-menu {
-    display: flex !important;
-  }
-
-  /* Optionnel si le lien gêne le hover */
-  .navbar ul li > a {
-    pointer-events: none;
-  }
-
-  .navbar ul li:hover > a {
-    pointer-events: auto;
-  }
-
-  #mobile-menu {
-    display: none;
-  }
-
-#enjeux {
-  position: relative;
-  background-image: url("images/enjeux.jpg"); /* Ton image en fond */
-  background-size: cover;                     /* L’image couvre toute la section */
-  background-position: center;                /* Centre l’image */
-  background-repeat: no-repeat;               /* Ne répète pas l’image */
-  color: white;                               /* Texte en blanc */
-  overflow: hidden;
-}
-
-
-.enjeux-wrapper {
-  position: relative; /* Sert de conteneur de référence pour l'image en position absolue */
-  width: 100%; /* Occupe toute la largeur du parent */
-  padding: 0; /* Supprime tout espacement intérieur */
-}
-
-.enjeux-image {
-  display: none;
-}
-
-/* La clé : forcer l’enjeux-content à créer la hauteur */
-.enjeux-content {
-  position: relative; /* Nécessaire pour placer le contenu au-dessus de l’image (z-index supérieur) */
-  z-index: 2; /* Assure que ce bloc passe au-dessus de l’image en arrière-plan */
-  background: rgba(0, 0, 0, 0.5); /* Applique un fond noir semi-transparent pour améliorer la lisibilité */
-  padding: 60px 40px; /* Ajoute de l’espace intérieur (haut/bas : 60px, gauche/droite : 40px) */
-  max-width: 100%; /* Limite la largeur du contenu à 1000px pour un meilleur confort de lecture */
-  bottom: 0;
-left: 0;
-right: 0;
-margin: 0 auto;
-
-
-}
-
-.enjeux-content h2 {
-  font-size: 2rem; /* Définit une taille de police plus grande pour le titre */
-  color: #a4dc4e; /* Donne au titre une couleur verte vive */
-  margin-bottom: 20px; /* Ajoute de l’espace sous le titre */
-}
-
-.enjeux-content ul {
-  display: flex; /* Utilise Flexbox pour disposer les éléments horizontalement */
-  flex-wrap: wrap; /* Autorise les retours à la ligne si les éléments ne tiennent pas sur une seule ligne */
-  justify-content: space-between; /* Répartit les éléments avec un espacement régulier */
-  list-style: none; /* Supprime les puces par défaut de la liste */
-  padding: 0; /* Supprime le retrait intérieur */
-  margin: 0; /* Supprime l’espace extérieur */
-}
-
-.enjeux-content li {
-  flex: 1 1 30%; /* Chaque élément occupe environ 30% de la ligne, et peut grandir/rétrécir si nécessaire */
-  font-size: 1.1rem; /* Augmente légèrement la taille du texte pour améliorer la lisibilité */
-  margin-bottom: 20px; /* Ajoute de l’espace sous chaque élément de liste */
-}
-
-
-
-
-}
-
-
-
-
-/* ============================= */
-/* === VERSION MOBILE ONLY ==== */
-/* ============================= */
-
-@media screen and (max-width: 1024px) {
-  .navbar {
-    flex-wrap: wrap;
-    height: auto;
-  }
-
-  #mobile-menu {
-    display: block;                /* Affiche le menu hamburger */
-  }
-
-  #nav-links {
-    display: none;                 /* Caché par défaut */
-    flex-direction: column;       /* Menu vertical */
-    width: 100%;
-    background-color: #290686;    /* Fond bleu nuit */
-    position: absolute;
-    top: 100px;
-    left: 0;
-    padding: 20px 0;
-    z-index: 999;
-  }
-
-  #nav-links.show {
-    display: flex;                 /* Affiche le menu si classe 'show' */
-  }
-
-  .navbar ul li {
-    text-align: center;
-  }
-
-  .navbar ul li a {
-    padding: 15px;
-    font-size: 18px;
-  }
-
-  .mega-menu {
-    position: static;
-    transform: none;
-    box-shadow: none;
-    padding: 10px;
-    min-width: unset;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .mega-menu .column {
-    min-width: 100%;
-  }
-
-  .navbar ul li .mega-menu {
-  display: none; /* Masqué par défaut */
-  position: static;
-  transform: none;
-  box-shadow: none;
-  padding: 10px;
-  min-width: unset;
-  flex-direction: column;
-  gap: 10px;
-  background-color: #fff;
-}
-
-.navbar ul li .mega-menu.show {
-  display: flex !important; /* Affiché dynamiquement via JS */
-}
-
-
-  .brand-name {
-    width: 100%;
-    text-align: center;
     margin-top: 10px;
-  }
-
-.accueil-desktop{
-  display: none;
 }
 
-  .accueil-mobile {
-    display: block; /* On affiche la version mobile */
-    position: relative; /* Contexte pour le positionnement */
-  }
+/* ========================= */
+/* ENJEUX */
+/* ========================= */
 
-  .mobile-bg {
-    display: block; /* On affiche l’image */
-    position: absolute; /* On positionne l’image sous le texte */
-    top: 0;
-    left: 0;
+.enjeux-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.enjeu-box {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* ========================= */
+/* CONTACT */
+/* ========================= */
+
+.contact-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    line-height: 2;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.socials {
+    margin-bottom: 15px;
+}
+
+.socials a {
+    color: white;
+    margin: 0 8px;
+    font-size: 1.2rem;
+}
+
+/* ========================= */
+/* LIENS LEGAUX DU FOOTER */
+/* ========================= */
+
+.footer-links{
+    margin-bottom:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.footer-links a{
+    color:#cbd5e1;
+    text-decoration:none;
+    font-size:0.95rem;
+    transition:0.3s;
+}
+
+.footer-links a:hover{
+    color:#38bdf8;
+}
+
+.footer-links span{
+    color:#64748b;
+}
+
+
+
+/* ========================= */
+/* EXPERTISE / SERVICES */
+/* ========================= */
+
+.services-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.services-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    line-height: 1.8;
+    color: #6b7280;
+}
+
+.expertise-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    background: white;
+    border-radius: 20px;
+
+    padding: 30px;
+
+    margin-bottom: 35px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.expertise-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.expertise-image {
+    flex: 1;
+}
+
+.expertise-image img {
     width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
+    height: 320px;
+    object-fit: cover;
+    border-radius: 15px;
+}
 
-  .mobile-overlay {
-    position: relative; /* Position relative au parent pour passer au-dessus de l’image */
-    z-index: 2; /* Texte au-dessus de l’image */
-    background-color: rgba(0, 0, 0, 0.6); /* Voile foncé semi-transparent */
-    padding: 20px;
-    font-size: 1.1rem;
-    line-height: 1.7;
-  }
+.expertise-content {
+    flex: 1;
+}
 
-  
-  .contact-grid {
-    flex-direction: column;
-    height: auto;
-  }
+.expertise-content h3 {
+    color: #004aad;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
 
-  .contact-info {
-    width: 100%;
-    padding: 2rem 1rem;
-    text-align: left;
-  }
+.expertise-content h3 i {
+    margin-right: 10px;
+}
 
-  .contact-image {
-    display: none;
-  }
+.expertise-content p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #4b5563;
+}
 
-  .social-button {
-    padding: 8px;
-  }
+.expertise-content ul {
+    padding-left: 20px;
+}
 
-  .social-button img {
-    width: 35px;
-    height: 35px;
-  }
+.expertise-content li {
+    margin-bottom: 10px;
+    color: #111827;
+}
 
-    .scroll-button {
-        width: 60px;
-        height: 60px;
-        font-size: 30px; /* Ajuste la taille des boutons de défilement pour les tablettes */
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media all and (max-width: 768px) {
+
+    .expertise-block,
+    .expertise-block.reverse {
+        flex-direction: column;
     }
 
-    footer {
-        font-size: 14px; /* Ajuste légèrement la taille du texte du pied de page */
+    .expertise-image img {
+        height: 220px;
     }
+
+    .expertise-content h3 {
+        font-size: 1.4rem;
+    }
+
+}
+
+
+
+
+/* ========================= */
+/* BOUTON COMMANDER PREMIUM */
+/* ========================= */
+
+.btn-commande{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    margin-top:12px;
+    padding:10px 16px;
+
+    background: linear-gradient(135deg,#22c1c3,#67e8f9);
+    color:white;
+
+    text-decoration:none;
+    font-weight:bold;
+    font-size:14px;
+
+    border-radius:30px;
+
+    box-shadow:0 8px 20px rgba(34,193,195,0.35);
+
+    transition:all 0.3s ease;
+
+    position:relative;
+    overflow:hidden;
+}
+
+/* effet glow au hover */
+.btn-commande::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,0.25);
+    transform:skewX(-20deg);
+    transition:0.5s;
+}
+
+.btn-commande:hover::before{
+    left:120%;
+}
+
+/* hover animation */
+.btn-commande:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(34,193,195,0.5);
+}
+
+/* icône WhatsApp */
+.btn-commande i{
+    font-size:16px;
+}
+
+
+
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+@media all and (max-width: 1024px) {
+
+    /* ========================= */
+    /* NAVBAR MOBILE */
+    /* ========================= */
+
+    .top-navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .logo-area {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .site-name {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .site-subtitle {
+        display: none;
+    }
+
+    /* ========================= */
+    /* NAV ICONS MOBILE */
+    /* ========================= */
+
+    .tabs-nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .tab-btn {
+        flex: 1;
+        padding: 8px 0;
+        border-radius: 10px;
+    }
+
+    .tab-btn span {
+        font-size: 0.65rem;
+    }
+
+    .tab-btn i {
+        font-size: 1.1rem;
+    }
+
+    /* ========================= */
+    /* HERO MOBILE */
+    /* ========================= */
+
+    .hero {
+        height: 70vh;
+        border-radius: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* ========================= */
+    /* SECTIONS */
+    /* ========================= */
+
+    .tab-content {
+        padding: 30px 15px;
+    }
+
+    /* ========================= */
+    /* SERVICES */
+    /* ========================= */
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card img {
+        height: 180px;
+    }
+
+    /* ========================= */
+    /* ENJEUX */
+    /* ========================= */
+
+    .enjeux-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ========================= */
+    /* CONTACT */
+    /* ========================= */
+
+    .contact-card {
+        font-size: 0.9rem;
+    }
+
+}
