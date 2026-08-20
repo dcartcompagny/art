@@ -1,248 +1,796 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DC ART Compagny</title>
-  <link rel="stylesheet" href="style.css" />
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>DC ART Compagny</title>
+
+    <link rel="stylesheet"
+          href="test.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
+
 <body>
-  <header>
-    <div class="container">
-  <div class="navbar">
-    <img src="images/logo2.jpg"  alt="Logo DC ART Compagny" class="logo" />
-    <div class="brand-name">DC ART COMPAGNY</div>
 
-    <div id="mobile-menu">☰</div>
+    <!-- ========================= -->
+    <!-- NAVBAR -->
+    <!-- ========================= -->
 
-    <ul id="nav-links">
-      <li><a href="#accueil">Accueil</a></li>
-      <li><a href="#about">À propos</a></li>
-      <li><a href="#enjeux">Enjeux</a></li>
-      <li><a href="#qualite">Qualité</a></li>
+    <header class="top-navbar">
 
-      <!-- Mega Menu -->
-      <li class="has-mega">
-  <a href="#">Services</a>
-  <div class="mega-menu">
-          <div class="column">
-            <h4>Infographie</h4>
-            <a href="#">Logo</a>
-            <a href="#">Affiches</a>
-            <a href="#">Maquettes</a>
-          </div>
-          <div class="column">
-            <h4>Publicité</h4>
-            <a href="#">Flyers</a>
-            <a href="#">Bannières</a>
-            <a href="#">Spot Vidéo</a>
-          </div>
-          <div class="column">
-            <h4>Impression</h4>
-            <a href="#">T-shirts</a>
-            <a href="#">Cartes de visite</a>
-            <a href="#">Autocollants</a>
-          </div>
+        <div class="logo-area">
+
+            <img src="images/l.jpg"
+                 alt="Logo DC ART"
+                 class="logo">
+
+            <div>
+
+                <h1 class="site-name">
+                    DC ART
+                </h1>
+
+                <span class="site-subtitle">
+                    COMPAGNY
+                </span>
+
+            </div>
+
         </div>
-      </li>
 
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
+        <nav class="tabs-nav">
 
-  </div>
+            <button class="tab-btn active"
+                    data-tab="accueil">
 
-  </header>
+                <i class="fa-solid fa-house"></i>
+                <span>Accueil</span>
 
-  <section class="accueil-desktop avec-image">
-  <img src="images/accueil1.png" alt="Image de fond" class="bg-image">
-  <div class="overlay">
-    <blockquote>« DC ART Compagny, l'excellence au service de vos ambitions. »</blockquote>
-    <p>
-      Chez <strong>DC ART Compagny</strong>, nous croyons qu’un service utile ne suffit pas — il doit être <strong>pertinent</strong>, <strong>rigoureux</strong> et <strong>durable</strong>. Implantée <strong>au Mali</strong>, notre entreprise accompagne les particuliers, les professionnels et les institutions dans leurs besoins quotidiens comme dans leurs projets stratégiques. Notre équipe pluridisciplinaire agit avec méthode, souplesse et exigence, pour répondre à vos attentes avec efficacité et discrétion. Au fil des missions, nous avons développé un savoir-faire fondé sur l’écoute active, la réactivité et le sens du résultat. C’est ce qui fait de <strong>DC ART Compagny</strong> un partenaire solide, fiable et tourné vers l’avenir.
-    </p>
-  </div>
-</section>
+            </button>
 
-<!-- 📱 Version Mobile -->
-<section class="accueil-mobile">
-  <img class="mobile-bg" src="images/accueil3.png" alt="Image fond mobile">
-  
-  <div class="mobile-overlay">
-    <blockquote>DC ART Compagny. L'excellence, pour vos ambitions.</blockquote>
-    <p>
-      Un service ne suffit pas s’il n’est pas <strong>pertinent</strong>, <strong>rigoureux</strong> et <strong>durable</strong>. 📍 <strong>Au Mali</strong>, nous accompagnons particuliers, professionnels et institutions. Du quotidien aux projets de fond, nous restons présents à chaque étape. 🛠️ Notre équipe est pluridisciplinaire, organisée et discrète. Elle agit avec <strong>méthode</strong>, <strong>souplesse</strong> et <strong>efficacité</strong>. 🎧 À chaque mission, nous misons sur l’<strong>écoute</strong>, la <strong>réactivité</strong> et le <strong>résultat</strong>. 🤝 <strong>DC ART Compagny</strong>, un partenaire <strong>solide</strong>, <strong>fiable</strong> et <strong>tourné vers l’avenir</strong>.
-    </p>
-  </div>
-</section>
+            <button class="tab-btn"
+                    data-tab="apropos">
 
+                <i class="fa-solid fa-users"></i>
+                <span>À propos</span>
 
+            </button>
 
-  <section id="about">
-    <div class="container">
-      <img src="images/about.jpg" alt="Équipe DC ART" class="section-image" />
-      <h2>Qui sommes-nous ?</h2>
-      <p>Basée à Magnambougou Wereda, Bamako (Mali), DC ART Compagny est une entreprise spécialisée dans les prestations de services et le commerce général. Nous plaçons l’esprit d’équipe et le rebondissement au cœur de notre culture d’entreprise.</p>
-      <p>Ces valeurs nous poussent à aller au-delà d’une simple collaboration : nous construisons des relations durables, fondées sur le respect, la confiance et l’envie de progresser ensemble.</p>
-    </div>
-  </section>
+            <button class="tab-btn"
+                    data-tab="enjeux">
 
-  <section id="enjeux">
-  <div class="enjeux-wrapper">
-    <img src="images/enjeux.jpg" alt="Stratégie et défis" class="enjeux-image" />
-    
-    <div class="enjeux-content">
-      <h2>Nos enjeux</h2>
-      <ul>
-        <li>Étudier avec soin les besoins spécifiques de chaque client</li>
-        <li>Apporter des solutions sur mesure</li>
-        <li>Être compétitifs sur les prix</li>
-        <li>Garantir des délais de livraison optimaux</li>
-        <li>Maintenir un haut niveau de qualité</li>
-      </ul>
-    </div>
-  </div>
-</section>
+                <i class="fa-solid fa-bullseye"></i>
+                <span>Enjeux</span>
 
+            </button>
 
-  <section class="news-section">
-  <div class="news-card">
-  <a href="images/1.jpg" title="Clique pour voir!"><img src="images/tn_1.jpg" alt="Impression offset papeterie et supports" /></a>
-  <div class="card-content">
-    <h3>Des supports d'impression professionnels et sur mesure</h3>
-    <p>
-      DC ART Company vous propose une gamme complète d’impressions offset : carnets, factures, cartes, invitations, emballages et bien plus encore. Des visuels de haute qualité pour valoriser votre communication.
-    </p>
-    <div class="card-footer">
-      <span class="date">25 juin 2025</span>
-      <a href="#" class="link">➜ En savoir plus</a>
-    </div>
-  </div>
-</div>
+            <button class="tab-btn"
+                    data-tab="qualite">
 
+                <i class="fa-solid fa-award"></i>
+                <span>Qualité</span>
 
-  <div class="news-card">
-  <a href="images/2.jpg" title="Clique pour voir!"><img src="images/tn_2.jpg" alt="Calendriers et badges personnalisés" /></a>
-  <div class="card-content">
-    <h3>Calendriers d’entreprise et badges d’identification</h3>
-    <p>
-      Renforcez votre image avec nos calendriers personnalisés et badges professionnels. DC ART Company garantit des impressions précises et un rendu élégant pour vos outils de communication annuels.
-    </p>
-    <div class="card-footer">
-      <span class="date">25 juin 2025</span>
-      <a href="#" class="link">➜ En savoir plus</a>
-    </div>
-  </div>
-</div>
+            </button>
 
+            <button class="tab-btn"
+                    data-tab="services">
 
-  <div class="news-card">
-  <a href="images/3.jpg" title="Clique pour voir!"><img src="images/tn_3.jpg" alt="Agendas personnalisés DC ART Company" /></a>
-  <div class="card-content">
-    <h3>Agendas élégants pour une organisation optimale</h3>
-    <p>
-      Découvrez notre sélection d’agendas professionnels personnalisables, alliant esthétisme et fonctionnalité. Un outil parfait pour bien planifier vos activités tout en affichant votre identité visuelle.
-    </p>
-    <div class="card-footer">
-      <span class="date">25 juin 2025</span>
-      <a href="#" class="link">➜ En savoir plus</a>
-    </div>
-  </div>
-</div>
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <span>Services</span>
 
-</section>
+            </button>
 
+            <button class="tab-btn"
+                    data-tab="contact">
 
-  <section id="qualite">
-    <div class="container">
-      <img src="images/service.jpg" alt="Contrôle qualité" class="section-image" />
-      <h2>Notre engagement qualité</h2>
-      <p>Depuis sa création, DC ART Compagny poursuit une démarche qualité rigoureuse, guidée par des objectifs clairs et constants. Cette exigence nous permet de proposer des prestations fiables et de répondre efficacement aux attentes de notre clientèle.</p>
-    </div>
-  </section>
+                <i class="fa-solid fa-phone"></i>
+                <span>Contact</span>
 
-  
+            </button>
 
-  <section id="contact" class="contact-section">
-  <div class="contact-grid">
-    <div class="contact-info">
-      <h2>Contact</h2>
-      <address>
-        <p><strong>Adresse :</strong> Quartier Magnambougou Wèrèda, Bamako, Mali</p>
-        <p><strong>Téléphone :</strong> +223 76 21 94 74</p>
-        <p><strong>Email :</strong> <a href="mailto:dcartcomp@gmail.com" class="email-link">dcartcomp@gmail.com</a>
-</p>
-        <p><strong>Horaires :</strong> Lundi – Vendredi : 8h – 17h30</p>
-      </address>
-    </div>
+        </nav>
 
-    <div class="contact-image">
-            <img src="images/contact.png" alt="Contact DC ART Compagny">
-    </div>
-  
-</section>
+    </header>
 
+    <!-- ========================= -->
+    <!-- ACCUEIL -->
+    <!-- ========================= -->
 
+    <section class="tab-content active"
+             id="accueil">
 
+        <section class="hero">
 
-<footer class="site-footer">
-  <div class="container">
-    <p>
-      <a href="politique-confidentialite.html">Politique de confidentialité</a> |
-      <a href="conditions-utilisation.html">Conditions d'utilisation</a>
-    </p>
-  </div>
+            <img src="images/lo.jpg"
+                 alt="DC ART"
+                 class="hero-image">
 
-  <div class="social-icons">
-         <!-- Bouton WhatsApp -->
-<a href="https://wa.me/22376856631?text=Bonjour!%20Je%20souhaite%20en%20savoir%20plus%20sur%20votre%20site%20web."
-   target="_blank"
-   class="social-button whatsapp-button"
-   aria-label="Contactez-nous sur WhatsApp">
-  <img src="icone/wa.png" alt="WhatsApp" />
-</a>
+            <div class="hero-overlay"></div>
 
-<!-- Bouton Facebook -->
-<a href="https://web.facebook.com/ibrahimdjime.diakite.3"
-   target="_blank"
-   class="social-button facebook-button"
-   aria-label="Partager sur Facebook">
-  <img src="icone/facebook.png" alt="Facebook" />
-</a>
+            <div class="hero-content">
 
-<!-- Bouton Twitter -->
-<a href="https://twitter.com/DiakitIbra19810"
-   target="_blank"
-   class="social-button twitter-button"
-   aria-label="Partager sur Twitter">
-  <img src="icone/x.png" alt="Twitter" />
-</a>
+                <span class="hero-badge">
+                    Excellence • Innovation • Qualité
+                </span>
 
-<!-- Bouton Instagram -->
-<a href="https://www.instagram.com/ibrahim_djime_diakite"
-   target="_blank"
-   class="social-button instagram-button"
-   aria-label="Voir Instagram">
-  <img src="icone/insta.png" alt="Instagram" />
-</a>
+                <h1>
+                    DC ART Compagny
+                </h1>
 
-<!-- Bouton TikTok -->
-<a href="https://www.tiktok.com/@ibradiak0"
-   target="_blank"
-   class="social-button tiktok-button"
-   aria-label="Partager sur TikTok">
-  <img src="icone/tiktok.png" alt="TikTok" />
-</a>
+                <h2>
+                    L'excellence au service de vos ambitions
+                </h2>
+
+                <p>
+
+                    Nous accompagnons particuliers,
+                    professionnels et institutions
+                    dans leurs projets avec des solutions
+                    fiables et adaptées.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button class="primary-btn"
+                            data-tab="services">
+
+                        Nos Services
+
+                    </button>
+
+                    <button class="secondary-btn"
+                            data-tab="contact">
+
+                        Contact
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SERVICES RAPIDES -->
+
+        <section class="home-services">
+
+    <h2>Nos Prestations</h2>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <img src="images/tn_a.jpg" alt="T-shirts personnalisés">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20des%20T-shirts%20personnalis%C3%A9s"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>T-shirts Personnalisés</h3>
+                <p>Impression sur t-shirts pour entreprises, associations et événements.</p>
+            </div>
         </div>
-        <p>&copy; 2025 DC ART Compagny. Site conçu par Ibrahim Djimé Diakité. Tous droits réservés.</p>
+
+        <div class="service-card">
+            <img src="images/tn_b.jpg" alt="Polos personnalisés">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20des%20Polos%20publicitaires"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Polos Publicitaires</h3>
+                <p>Polos personnalisés pour renforcer l’image de votre marque.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/tn_c.jpg" alt="Supports marketing">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20des%20supports%20marketing"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Supports Marketing</h3>
+                <p>Flyers, affiches et documents promotionnels de qualité professionnelle.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/tn_d.jpg" alt="Identité visuelle">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20une%20identit%C3%A9%20visuelle"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Identité Visuelle</h3>
+                <p>Création de chartes graphiques et supports de communication.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/tn_e.jpg" alt="Conception graphique">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20un%20design%20graphique"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Design Graphique</h3>
+                <p>Conception de visuels modernes adaptés à votre activité.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/tn_f.jpg" alt="Calendriers">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20des%20calendriers%20personnalis%C3%A9s"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Calendriers</h3>
+                <p>Calendriers personnalisés pour entreprises et organisations.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/tn_g.jpg" alt="Carnets et agendas">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20des%20carnets%20et%20agendas"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Carnets & Agendas</h3>
+                <p>Agendas, cahiers et carnets personnalisés à votre image.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/tn_h.jpg" alt="Maillots personnalisés">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20des%20maillots%20personnalis%C3%A9s"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Maillots Personnalisés</h3>
+                <p>Maillots sportifs et tenues promotionnelles sur mesure.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/tn_i.jpg" alt="Vêtements professionnels">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20des%20tenues%20professionnelles"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Tenues Professionnelles</h3>
+                <p>Uniformes et vêtements de travail personnalisés.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/tn_j.jpg" alt="Mugs personnalisés">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20des%20mugs%20publicitaires"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Mugs Publicitaires</h3>
+                <p>Mugs personnalisés pour cadeaux d’entreprise et promotion.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/tn_k.jpg" alt="Porte-clés">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20des%20porte-cl%C3%A9s%20personnalis%C3%A9s"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Porte-clés Personnalisés</h3>
+                <p>Objets publicitaires pratiques pour accroître votre visibilité.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/tn_l.jpg" alt="Infographie et publicité">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20une%20infographie"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Infographie & Publicité</h3>
+                <p>Création graphique et solutions publicitaires sur mesure.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/tn_lo.jpg" alt="Logo et branding">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20un%20logo%20professionnel"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Création de Logo</h3>
+                <p>Conception de logos professionnels et identité de marque.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/tn_m.jpg" alt="Objets promotionnels">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20des%20objets%20promotionnels"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Objets Promotionnels</h3>
+                <p>Articles personnalisés pour vos campagnes de communication.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/tn_n.jpg" alt="Goodies publicitaires">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20des%20goodies%20publicitaires"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Goodies Publicitaires</h3>
+                <p>Large gamme d’objets personnalisés pour promouvoir votre marque.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/tn_o.jpg" alt="Sérigraphie">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20de%20la%20s%C3%A9rigraphie"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Sérigraphie & Marquage</h3>
+                <p>Personnalisation d’objets par impression durable et précise.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/tn_p.jpg" alt="Fournitures">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20des%20fournitures%20personnalis%C3%A9es"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Fournitures Personnalisées</h3>
+                <p>Stylos, accessoires et fournitures marqués à votre image.</p>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <img src="images/tn_q.jpg" alt="Trophées">
+            <div class="card-content">
+                <a href="https://wa.me/22376219474?text=Bonjour%20je%20veux%20commander%20des%20troph%C3%A9es%20et%20r%C3%A9compenses"
+                   class="btn-commande">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Commander
+                </a>
+                <h3>Trophées & Récompenses</h3>
+                <p>Médailles, trophées et distinctions personnalisées.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- A PROPOS -->
+    <!-- ========================= -->
+
+    <section class="tab-content"
+             id="apropos">
+
+        <div class="container">
+
+            <h2>
+                Qui sommes-nous ?
+            </h2>
+
+            <p>
+
+                Basée à Magnambougou Wereda,
+                Bamako (Mali), DC ART Compagny
+                est spécialisée dans les prestations
+                de services et le commerce général.
+
+            </p>
+
+            <p>
+
+                Nous construisons des relations
+                durables fondées sur la confiance,
+                le professionnalisme et le respect.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- ENJEUX -->
+    <!-- ========================= -->
+
+    <section class="tab-content"
+             id="enjeux">
+
+        <div class="container">
+
+            <h2>
+                Nos Enjeux
+            </h2>
+
+            <div class="enjeux-grid">
+
+                <div class="enjeu-box">
+                    Étudier les besoins spécifiques
+                    de chaque client.
+                </div>
+
+                <div class="enjeu-box">
+                    Proposer des solutions
+                    sur mesure.
+                </div>
+
+                <div class="enjeu-box">
+                    Garantir des prix compétitifs.
+                </div>
+
+                <div class="enjeu-box">
+                    Respecter les délais.
+                </div>
+
+                <div class="enjeu-box">
+                    Maintenir un haut niveau
+                    de qualité.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- QUALITE -->
+    <!-- ========================= -->
+
+    <section class="tab-content"
+             id="qualite">
+
+        <div class="container">
+
+            <h2>
+                Notre Engagement Qualité
+            </h2>
+
+            <p>
+
+                Depuis sa création,
+                DC ART Compagny poursuit
+                une démarche qualité rigoureuse.
+
+            </p>
+
+            <p>
+
+                Chaque prestation est réalisée
+                selon des standards élevés afin
+                d'assurer la satisfaction durable
+                de nos clients.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- SERVICES -->
+    <!-- ========================= -->
+
+   <section class="tab-content" id="services">
+
+    <div class="container">
+
+        <h2 class="services-title">
+            Notre Expertise
+        </h2>
+
+        <p class="services-intro">
+            Nous accompagnons entreprises, institutions, associations et particuliers
+            dans la conception, la personnalisation et la production de supports de
+            communication à forte valeur ajoutée.
+        </p>
+
+        <!-- Impression -->
+
+        <div class="expertise-block">
+
+            <div class="expertise-image">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3"
+     alt="Impression professionnelle">
+            </div>
+
+            <div class="expertise-content">
+
+                <h3>
+                    <i class="fa-solid fa-print"></i>
+                    Impression & Édition
+                </h3>
+
+                <p>
+                    Nous réalisons des impressions professionnelles destinées à renforcer
+                    votre visibilité et valoriser votre image auprès de vos clients.
+                </p>
+
+                <ul>
+                    <li>Flyers</li>
+                    <li>Affiches</li>
+                    <li>Brochures</li>
+                    <li>Dépliants</li>
+                    <li>Cartes de visite</li>
+                    <li>Catalogues</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Textile -->
+
+        <div class="expertise-block reverse">
+
+            <div class="expertise-image">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
+     alt="Textile personnalisé">
+            </div>
+
+            <div class="expertise-content">
+
+                <h3>
+                    <i class="fa-solid fa-shirt"></i>
+                    Textile Personnalisé
+                </h3>
+
+                <p>
+                    Faites de vos vêtements un véritable outil de communication grâce
+                    à nos solutions de personnalisation textile.
+                </p>
+
+                <ul>
+                    <li>T-shirts personnalisés</li>
+                    <li>Polos publicitaires</li>
+                    <li>Maillots sportifs</li>
+                    <li>Uniformes professionnels</li>
+                    <li>Tenues événementielles</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Design -->
+
+        <div class="expertise-block">
+
+            <div class="expertise-image">
+                <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6"
+     alt="Design graphique">
+            </div>
+
+            <div class="expertise-content">
+
+                <h3>
+                    <i class="fa-solid fa-palette"></i>
+                    Design & Communication Visuelle
+                </h3>
+
+                <p>
+                    Nous créons des identités visuelles modernes et impactantes qui
+                    renforcent la crédibilité et la reconnaissance de votre marque.
+                </p>
+
+                <ul>
+                    <li>Création de logos</li>
+                    <li>Infographie</li>
+                    <li>Chartes graphiques</li>
+                    <li>Visuels publicitaires</li>
+                    <li>Supports de communication</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Goodies -->
+
+        <div class="expertise-block reverse">
+
+            <div class="expertise-image">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+     alt="Objets publicitaires">
+            </div>
+
+            <div class="expertise-content">
+
+                <h3>
+                    <i class="fa-solid fa-gift"></i>
+                    Objets Publicitaires & Goodies
+                </h3>
+
+                <p>
+                    Augmentez la visibilité de votre entreprise grâce à des objets
+                    personnalisés utiles et mémorables.
+                </p>
+
+                <ul>
+                    <li>Mugs personnalisés</li>
+                    <li>Porte-clés</li>
+                    <li>Stylos publicitaires</li>
+                    <li>Fournitures personnalisées</li>
+                    <li>Objets promotionnels</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Récompenses -->
+
+        <div class="expertise-block">
+
+            <div class="expertise-image">
+                 <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b"
+     alt="Trophées et récompenses">
+            </div>
+
+            <div class="expertise-content">
+
+                <h3>
+                    <i class="fa-solid fa-award"></i>
+                    Récompenses & Événementiel
+                </h3>
+
+                <p>
+                    Valorisez les réussites et marquez les esprits grâce à des
+                    récompenses personnalisées adaptées à tous vos événements.
+                </p>
+
+                <ul>
+                    <li>Trophées</li>
+                    <li>Médailles</li>
+                    <li>Badges</li>
+                    <li>Calendriers</li>
+                    <li>Agendas</li>
+                    <li>Distinctions personnalisées</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ========================= -->
+    <!-- CONTACT -->
+    <!-- ========================= -->
+
+    <section class="tab-content"
+             id="contact">
+
+        <div class="container">
+
+            <h2>
+                Contact
+            </h2>
+
+            <div class="contact-card">
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Magnambougou Wèrèda,
+                    Bamako, Mali
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +223 76 21 94 74
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    dcartcomp@gmail.com
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-clock"></i>
+                    Lundi - Vendredi
+                    08h00 - 17h30
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <footer>
+
+    <div class="socials">
+
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+
+    </div>
+
+    <!-- Liens légaux -->
+    <div class="footer-links">
+
+        <a href="poli.html">
+            Politique de confidentialité
+        </a>
+
+        <span>|</span>
+
+        <a href="cond.html">
+            Conditions d'utilisation
+        </a>
+
+    </div>
+
+    <p>
+        © 2025 DC ART Company.<br>
+        Site conçu par Ibrahim Djimé Diakité.
+    </p>
 
 </footer>
 
-
-
-
-<script src="menu.js"></script>
+    <script src="test.js"></script>
 
 </body>
 </html>
-
