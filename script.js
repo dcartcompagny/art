@@ -1,56 +1,62 @@
-console.log("Le fichier JavaScript est bien chargé");
+/* ========================= */
+/* ONGLETS PRINCIPAL */
+/* ========================= */
 
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.getElementById('nav-links');
-const megaMenus = document.querySelectorAll('.mega-menu');
+const buttons = document.querySelectorAll(".tab-btn");
+const contents = document.querySelectorAll(".tab-content");
 
-function isMobile() {
-  return window.innerWidth <= 1024;
+let currentTab = "accueil";
+
+function activateTab(target, pushState = true) {
+
+    if (target === currentTab) return;
+
+    currentTab = target;
+
+    /* reset boutons */
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    /* reset sections */
+    contents.forEach(sec => sec.classList.remove("active"));
+
+    /* activer section */
+    const section = document.getElementById(target);
+    if (section) section.classList.add("active");
+
+    /* activer bouton */
+    const btn = document.querySelector(`.tab-btn[data-tab="${target}"]`);
+    if (btn) btn.classList.add("active");
+
+    /* URL hash */
+    if (pushState) {
+        history.pushState({ tab: target }, "", `#${target}`);
+    }
 }
 
-// === AFFICHAGE DU MENU MOBILE ===
-mobileMenu.addEventListener('click', (e) => {
-  e.stopPropagation(); // Empêche la fermeture immédiate
-  navLinks.classList.toggle('show');
-});
-
-// === FERMER LE MENU MOBILE SI ON CLIQUE AILLEURS ===
-document.addEventListener('click', (e) => {
-  if (
-    navLinks.classList.contains('show') &&
-    !navLinks.contains(e.target) &&
-    e.target !== mobileMenu
-  ) {
-    navLinks.classList.remove('show');
-    megaMenus.forEach(menu => menu.style.display = 'none');
-  }
-});
-
-// === FERMER LE MENU MOBILE SI UN LIEN EST CLIQUÉ ===
-document.querySelectorAll('#nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    if (isMobile()) {
-      navLinks.classList.remove('show');
-    }
-  });
-});
-
-// === EMPECHER LE HOVER DU MEGA-MENU SUR MOBILE ===
-document.querySelectorAll('#nav-links > li').forEach(item => {
-  const megaMenu = item.querySelector('.mega-menu');
-  const link = item.querySelector('a');
-
-  if (megaMenu && link) {
-    link.addEventListener('click', (e) => {
-      if (isMobile()) {
-        e.preventDefault();
-        // Fermer les autres mega menus
-        megaMenus.forEach(menu => {
-          if (menu !== megaMenu) menu.style.display = 'none';
-        });
-        // Toggle affichage
-        megaMenu.style.display = (megaMenu.style.display === 'flex') ? 'none' : 'flex';
-      }
+/* click navbar */
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        activateTab(btn.dataset.tab);
     });
-  }
+});
+
+/* boutons hero */
+document.querySelectorAll("[data-tab]").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        activateTab(btn.dataset.tab);
+    });
+});
+
+/* back/forward browser */
+window.addEventListener("popstate", (e) => {
+    const tab = e.state?.tab || "accueil";
+    activateTab(tab, false);
+    currentTab = tab;
+});
+
+/* init page */
+window.addEventListener("DOMContentLoaded", () => {
+    const hash = window.location.hash.replace("#", "");
+    activateTab(hash || "accueil", false);
 });
